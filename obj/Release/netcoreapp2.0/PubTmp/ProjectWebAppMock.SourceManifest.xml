@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\gcair\Documents\Visual Studio 2017\Projects\ProjectWebAppMock\ProjectWebAppMock\obj\Release\netcoreapp2.0\PubTmp\Out\" />
+  <dbfullsql path="C:\Users\gcair\Documents\Visual Studio 2017\Projects\ProjectWebAppMock\ProjectWebAppMock\obj\Release\netcoreapp2.0\PubTmp\EFSQLScripts\ProjectWebAppMock.Data.ApplicationDbContext.sql" />
+</sitemanifest>

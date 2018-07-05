@@ -1,0 +1,11 @@
+C:\Users\gcair\Documents\Visual Studio 2017\Projects\ProjectWebAppMock\ProjectWebAppMock\bin\Debug\netcoreapp2.0\ProjectWebAppMock.deps.json
+C:\Users\gcair\Documents\Visual Studio 2017\Projects\ProjectWebAppMock\ProjectWebAppMock\bin\Debug\netcoreapp2.0\ProjectWebAppMock.runtimeconfig.json
+C:\Users\gcair\Documents\Visual Studio 2017\Projects\ProjectWebAppMock\ProjectWebAppMock\bin\Debug\netcoreapp2.0\ProjectWebAppMock.runtimeconfig.dev.json
+C:\Users\gcair\Documents\Visual Studio 2017\Projects\ProjectWebAppMock\ProjectWebAppMock\bin\Debug\netcoreapp2.0\ProjectWebAppMock.dll
+C:\Users\gcair\Documents\Visual Studio 2017\Projects\ProjectWebAppMock\ProjectWebAppMock\bin\Debug\netcoreapp2.0\ProjectWebAppMock.pdb
+C:\Users\gcair\Documents\Visual Studio 2017\Projects\ProjectWebAppMock\ProjectWebAppMock\obj\Debug\netcoreapp2.0\ProjectWebAppMock.csproj.CoreCompileInputs.cache
+C:\Users\gcair\Documents\Visual Studio 2017\Projects\ProjectWebAppMock\ProjectWebAppMock\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\gcair\Documents\Visual Studio 2017\Projects\ProjectWebAppMock\ProjectWebAppMock\obj\Debug\netcoreapp2.0\ProjectWebAppMock.AssemblyInfoInputs.cache
+C:\Users\gcair\Documents\Visual Studio 2017\Projects\ProjectWebAppMock\ProjectWebAppMock\obj\Debug\netcoreapp2.0\ProjectWebAppMock.AssemblyInfo.cs
+C:\Users\gcair\Documents\Visual Studio 2017\Projects\ProjectWebAppMock\ProjectWebAppMock\obj\Debug\netcoreapp2.0\ProjectWebAppMock.dll
+C:\Users\gcair\Documents\Visual Studio 2017\Projects\ProjectWebAppMock\ProjectWebAppMock\obj\Debug\netcoreapp2.0\ProjectWebAppMock.pdb

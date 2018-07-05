@@ -1,0 +1,121 @@
+@model ProjectWebAppMock.Models.ProjectViewModels.ProjectDetailsVM
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Project</h4>
+    <hr />
+    <dl class="dl-horizontal">
+      <dt>
+        @Html.DisplayNameFor(model => model.project.ProjectTitle)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.project.ProjectTitle)
+      </dd>
+      <dt>
+        @Html.DisplayNameFor(model => model.ownerName)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.ownerName)
+      </dd>
+      <dt>
+        @Html.DisplayNameFor(model => model.workstreamName)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.workstreamName)
+      </dd>
+      <dt>
+        @Html.DisplayNameFor(model => model.typeName)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.typeName)
+      </dd>
+      <dt>
+        @Html.DisplayNameFor(model => model.project.ProjectDescription)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.project.ProjectDescription)
+      </dd>
+      <dt>
+        @Html.DisplayNameFor(model => model.project.ProjectObjective)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.project.ProjectObjective)
+      </dd>
+      <dt>
+        @Html.DisplayNameFor(model => model.project.ProjectAssumptions)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.project.ProjectAssumptions)
+      </dd>
+      <dt>
+        @Html.DisplayNameFor(model => model.project.HowManyPeopleAffected)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.project.HowManyPeopleAffected)
+      </dd>
+      <dt>
+        @Html.DisplayNameFor(model => model.project.AgeRange)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.project.AgeRange)
+      </dd>
+      <dt>
+        @Html.DisplayNameFor(model => model.project.WhereLiving)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.project.WhereLiving)
+      </dd>
+      <dt>
+        @Html.DisplayNameFor(model => model.project.IIAApproved)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.project.IIAApproved)
+      </dd>
+      <dt>
+        @Html.DisplayNameFor(model => model.project.QIARequired)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.project.QIARequired)
+      </dd>
+      <dt>
+        @Html.DisplayNameFor(model => model.project.PatientSafetyDesc)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.project.PatientSafetyDesc)
+      </dd>
+      <dt>
+        @Html.DisplayNameFor(model => model.project.PSC)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.project.PSC)
+      </dd>
+      <dt>
+        @Html.DisplayNameFor(model => model.project.PSL)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.project.PSL)
+      </dd>
+      <dt>
+        @Html.DisplayNameFor(model => model.project.PSR)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.project.PSR)
+      </dd>
+      <dt>
+        @Html.DisplayNameFor(model => model.project.QIAApproved)
+      </dt>
+      <dd>
+        @Html.DisplayFor(model => model.project.QIAApproved)
+      </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.project.ProjectId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

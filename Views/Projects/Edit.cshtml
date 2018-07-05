@@ -1,0 +1,187 @@
+@model ProjectWebAppMock.Models.Project
+
+@{
+  ViewData["Title"] = "Edit";
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+
+
+<h4>Project</h4>
+<hr />
+<div class="row">
+  <div>
+    <span class="text-danger">@ViewBag.Error</span>
+  </div>
+  <div class="info panel-success">
+    <span class="text-success">@ViewBag.Success</span>
+  </div>
+  <form asp-action="Edit">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="ProjectId" />
+    <div id="OuterForm">
+      <div class="form-group">
+        <button type="submit" class="btn btn-default btn-danger pull-right"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save</button>
+      </div>
+      <!-- Tabstrip -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+          <a href="#PID" role="tab" data-toggle="tab">Project Initiation Document</a>
+        </li>
+        <li role="presentation" class="">
+          <a href="#IIA" role="tab" data-toggle="tab">Initial Impact Assessment</a>
+        </li>
+        <li role="presentation" class="">
+          <a href="#QIA" role="tab" data-toggle="tab">Quality Impact Assessment</a>
+        </li>
+        <li role="presentation" class="">
+          <a href="#Milestones" role="tab" data-toggle="tab">Milestones</a>
+        </li>
+      </ul>
+      <!--Tab Panes-->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="PID">
+          <!-- Input Fields-->
+          <div class="form-group">
+            <label asp-for="ProjectTitle" class="control-label"></label>
+            <input asp-for="ProjectTitle" class="form-control" />
+            <span asp-validation-for="ProjectTitle" class="text-danger"></span>
+          </div>
+          <div class="form-group">
+            <label asp-for="ProjectDescription" class="control-label"></label>
+            <input asp-for="ProjectDescription" class="form-control" />
+            <span asp-validation-for="ProjectDescription" class="text-danger"></span>
+          </div>
+          <div class="form-group">
+            <label asp-for="ProjectObjective" class="control-label"></label>
+            <input asp-for="ProjectObjective" class="form-control" />
+            <span asp-validation-for="ProjectObjective" class="text-danger"></span>
+          </div>
+          <div class="form-group">
+            <label asp-for="ProjectAssumptions" class="control-label"></label>
+            <input asp-for="ProjectAssumptions" class="form-control" />
+            <span asp-validation-for="ProjectAssumptions" class="text-danger"></span>
+          </div>
+          <!-- Workstream and PID Type Drop-downs to come. -->
+          @*<div class="form-group">
+        <label asp-for="pIDType" class="control-label"></label>
+        @Html.DropDownListFor(x => x.pIDType, new SelectList(Model.PidTypes, "Value", "Text"), htmlAttributes: new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.pIDType, "Please select a value", new { @class = "text-danger" })
+      </div>
+      <div class="form-group">
+        <label asp-for="workstream" class="control-label"></label>
+        @Html.DropDownListFor(x => x.workstream, new SelectList(Model.Workstreams, "Value", "Text"), htmlAttributes: new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.workstream, "Please select a value", new { @class = "text-danger" })
+      </div>*@
+        </div>
+        <div role="tabpanel" class="tab-pane" id="IIA">
+          <!-- Input Fields-->
+          <div class="form-group">
+            <label asp-for="HowManyPeopleAffected" class="control-label"></label>
+            <input asp-for="HowManyPeopleAffected" class="form-control" />
+            <span asp-validation-for="HowManyPeopleAffected" class="text-danger"></span>
+          </div>
+          <div class="form-group">
+            <label asp-for="AgeRange" class="control-label"></label>
+            <input asp-for="AgeRange" class="form-control" />
+            <span asp-validation-for="AgeRange" class="text-danger"></span>
+          </div>
+          <div class="form-group">
+            <label asp-for="WhereLiving" class="control-label"></label>
+            <input asp-for="WhereLiving" class="form-control" />
+            <span asp-validation-for="WhereLiving" class="text-danger"></span>
+          </div>
+          <div class="form-group">
+            <label asp-for="IIAApproved" class="control-label"></label>
+
+            @if (User.IsInRole("Assessor"))
+            {
+              <select asp-for="IIAApproved" class="form-control" asp-items="Html.GetEnumSelectList<Approval>()">
+                <option selected="selected" value=""></option>
+              </select>
+
+            }
+            else
+            {
+              <select disabled="disabled" class="form-control" asp-for="IIAApproved" asp-items="Html.GetEnumSelectList<Approval>()">
+                <option selected="selected" value=""></option>
+              </select>
+            }
+
+            <span asp-validation-for="IIAApproved" class="text-danger"></span>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="QIA">
+          <!-- Input Fields-->
+          <div class="form-group">
+            <label asp-for="QIARequired" class="control-label"></label>
+            <input asp-for="QIARequired" class="form-control" />
+            <span asp-validation-for="QIARequired" class="text-danger"></span>
+          </div>
+          <div class="form-group">
+            <label asp-for="PatientSafetyDesc" class="control-label"></label>
+            <input asp-for="PatientSafetyDesc" class="form-control" />
+            <span asp-validation-for="PatientSafetyDesc" class="text-danger"></span>
+          </div>
+          <div class="form-group">
+            <label asp-for="PSC" class="control-label"></label>
+            <input asp-for="PSC" class="form-control" />
+            <span asp-validation-for="PSC" class="text-danger"></span>
+          </div>
+          <div class="form-group">
+            <label asp-for="PSL" class="control-label"></label>
+            <input asp-for="PSL" class="form-control" />
+            <span asp-validation-for="PSL" class="text-danger"></span>
+          </div>
+          <div class="form-group">
+            <label asp-for="PSR" class="control-label"></label>
+            <span class="form-control">@Html.DisplayFor(m => m.PSR)</span>
+          </div>
+          <div class="form-group">
+            <label asp-for="QIAApproved" class="control-label"></label>
+
+            @if (User.IsInRole("Assessor"))
+            {
+              <select asp-for="QIAApproved" class="form-control" asp-items="Html.GetEnumSelectList<Approval>()">
+                <option selected="selected" value="">Please select</option>
+              </select>
+
+            }
+            else
+            {
+              <select disabled="disabled" class="form-control" asp-for="QIAApproved" asp-items="Html.GetEnumSelectList<Approval>()">
+                <option selected="selected" value="">Please select</option>
+              </select>
+            }
+            <span asp-validation-for="IIAApproved" class="text-danger"></span>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="Milestones">
+          @*<div class="form-group">
+            <label asp-for="Mil" class="control-label"></label>
+            <input asp-for="QIARequired" class="form-control" />
+            <span asp-validation-for="QIARequired" class="text-danger"></span>
+          </div>
+          <div class="form-group">
+            <label asp-for="QIARequired" class="control-label"></label>
+            <input asp-for="QIARequired" class="form-control" />
+            <span asp-validation-for="QIARequired" class="text-danger"></span>
+          </div>
+          <div class="form-group">
+            <label asp-for="QIARequired" class="control-label"></label>
+            <input asp-for="QIARequired" class="form-control" />
+            <span asp-validation-for="QIARequired" class="text-danger"></span>
+          </div>*@
+        </div>
+
+        </div>
+      </div>
+  </form>
+  <div>
+    <a class="btn btn-default" asp-action="Index"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Back to List</a>
+  </div>
+</div>
+
+

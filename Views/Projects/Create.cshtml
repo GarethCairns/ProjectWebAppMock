@@ -1,0 +1,139 @@
+@model ProjectWebAppMock.Models.ProjectViewModels.ProjectCreateVM
+
+@{
+  ViewData["Title"] = "Create";
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>Project</h4>
+<hr />
+
+  @if (!ViewData.ModelState.IsValid)
+  {
+<div class="alert alert-danger">
+  @Html.ValidationSummary()
+  @*<span>Issues found are;</span>
+  @foreach (var error in ViewBag.Errors)
+  {
+    <li>@error</li>
+  }*@
+</div>
+
+  }
+  <div class="row">
+   
+      <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @*<input type="hidden" asp-for="ProjectId" />*@
+        <div id="OuterForm">
+          <div class="form-group">
+            <button type="submit" class="btn btn-default btn-danger pull-right"><span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save</button>
+          </div>
+          <!-- Tabstrip -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+              <a href="#PID" role="tab" data-toggle="tab">Project Initiation Document</a>
+            </li>
+            <li role="presentation">
+              <a href="#IIA" role="tab" data-toggle="tab">Initial Impact Assessment</a>
+            </li>
+            <li role="presentation">
+              <a href="#QIA" role="tab" data-toggle="tab">Quality Impact Assessment</a>
+            </li>
+          </ul>
+          <!--Tab Panes-->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="PID">
+              <!-- Input Fields - PID-->
+              <div class="form-group">
+                <label asp-for="ProjectTitle" class="control-label"></label>
+                <input asp-for="ProjectTitle" class="form-control" />
+                <span asp-validation-for="ProjectTitle" class="text-danger"></span>
+              </div>
+              <div class="form-group">
+                <label asp-for="ProjectDescription" class="control-label"></label>
+                <input asp-for="ProjectDescription" class="form-control" />
+                <span asp-validation-for="ProjectDescription" class="text-danger"></span>
+              </div>
+              <div class="form-group">
+                <label asp-for="ProjectObjective" class="control-label"></label>
+                <input asp-for="ProjectObjective" class="form-control" />
+                <span asp-validation-for="ProjectObjective" class="text-danger"></span>
+              </div>
+              <div class="form-group">
+                <label asp-for="ProjectAssumptions" class="control-label"></label>
+                <input asp-for="ProjectAssumptions" class="form-control" />
+                <span asp-validation-for="ProjectAssumptions" class="text-danger"></span>
+              </div>
+              <div class="form-group">
+                <label asp-for="PIDTypeId" class="control-label"></label>
+                <select asp-for="PIDTypeId" class="form-control" asp-items="@Model.PidTypes">
+                  <option selected="selected" value="">Please Select</option>
+                </select>
+                <span asp-validation-for="PIDTypeId" class="text-danger"></span>
+              </div>
+              <div class="form-group">
+                <label asp-for="WorkstreamId" class="control-label"></label>
+               <select asp-for="WorkstreamId" class="form-control" asp-items="@Model.Workstreams">
+                 <option selected="selected" value="">Please Select</option>
+               </select>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="IIA">
+              <!-- Input Fields -  IIA -->
+              <div class="form-group">
+                <label asp-for="HowManyPeopleAffected" class="control-label"></label>
+                <input asp-for="HowManyPeopleAffected" class="form-control" />
+                <span asp-validation-for="HowManyPeopleAffected" class="text-danger"></span>
+              </div>
+              <div class="form-group">
+                <label asp-for="AgeRange" class="control-label"></label>
+                <input asp-for="AgeRange" class="form-control" />
+                <span asp-validation-for="AgeRange" class="text-danger"></span>
+              </div>
+              <div class="form-group">
+                <label asp-for="WhereLiving" class="control-label"></label>
+                <input asp-for="WhereLiving" class="form-control" />
+                <span asp-validation-for="WhereLiving" class="text-danger"></span>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="QIA">
+                <!-- Input Fields - QIA-->
+                <div class="form-group">
+                  <label asp-for="QIARequired" class="control-label"></label>
+                  <input asp-for="QIARequired" class="form-control" />
+                  <span asp-validation-for="QIARequired" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                  <label asp-for="PatientSafetyDesc" class="control-label"></label>
+                  <input asp-for="PatientSafetyDesc" class="form-control" />
+                  <span asp-validation-for="PatientSafetyDesc" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                  <label asp-for="PSC" class="control-label"></label>
+                  <input asp-for="PSC" class="form-control" />
+                  <span asp-validation-for="PSC" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                  <label asp-for="PSL" class="control-label"></label>
+                  <input asp-for="PSL" class="form-control" />
+                  <span asp-validation-for="PSL" class="text-danger"></span>
+                </div>
+                @*<div class="form-group">
+                  <label asp-for="PSR" class="control-label"></label>
+                  <input asp-for="PSR" class="form-control" />
+                  <span asp-validation-for="PSR" class="text-danger"></span>
+                </div>*@
+              </div>
+            </div>
+          </div>
+      </form>
+    </div>
+ 
+
+
+  <div>
+    <a class="btn btn-default" asp-action="Index"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Back to List</a>
+  </div>

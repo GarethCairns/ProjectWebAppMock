@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARmz9q1sf30+P4SBd1iGJeAAAAAACAAAAAAAQZgAAAAEAACAAAABwFtVkdwtjHoYgAUD9bwM2cfVwXOCBNrQ4CLxhDCKmMQAAAAAOgAAAAAIAACAAAADxUT/3r9Ovuhm3yqPuvJXvkikfL4xymtbpRfk4lqj/boAAAABPFvdJdUq3lbY2CP8guISJh8lLuhqfMwqBtyWj27VLKGAfmw+gUrNfFHm49TcZXztI8Ay440BtD6mLdqZFc8pGQsL8JI/OPdvcMCpqmDQK6vIOWeMuFZ9mKeStwvcBqUR74qrhyO1FuUnqgLhUwvRV6zUuqqaiT/YRlurBtqI2u0AAAABh8ai0OTk8g7KwnxX0N9HFCKuV6uaT8OK4nPItjHziSbfaxuIur3gQMygQJTYNImGYZoUt4fCjicUKwUGim6BF</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="ProjectWebAppMock.Data.ApplicationDbContext">
+      <Value>Server=tcp:gcairns-projects.database.windows.net,1433;Initial Catalog=Projects;Persist Security Info=False;User ID=gareth;Password=February560667;MultipleActiveResultSets=True;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
